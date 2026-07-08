@@ -15,6 +15,17 @@
 
 ## 2026-07-09 — Spectre v0.2.0
 
+- Production-hardened all scripts
+
+## 2026-07-09 — Spectre v0.3.0
+
+- Added working FastAPI microservice template with app factory, models, routes, schemas, tests
+- Added Python API client template with async httpx client, generic types, pydantic models
+- Added Next.js 15 + React 19 + Tailwind v4 frontend scaffold (App Router, standalone output)
+- Added 5 new playbooks: security-audit, performance, api-versioning, database-migration, cicd
+- Added 3 OpenCode specialist subagents: backend, frontend, devops
+- Added bootstrap-system.sh for fresh machine setup (clone, deps, config, shell integration)
+
 - Production-hardened all scripts (error traps, exit codes, expanded security patterns, parameterized targets)
 - Replaced hardcoded secrets in docker-compose.yml with env var interpolation
 - Fixed Dockerfile multi-stage to copy source code
