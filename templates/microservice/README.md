@@ -1,33 +1,29 @@
-# Template: FastAPI Microservice
+# Service
 
-Project scaffold for a new FastAPI microservice.
+Modelink microservice.
 
-## Usage
+## Quickstart
 
 ```bash
 cp -r ~/.spectre/templates/microservice ./my-service
+cd my-service
+python -m venv .venv && source .venv/bin/activate
+pip install -e ".[dev]"
+uvicorn service.main:app --reload
 ```
 
 ## Structure
 
 ```
-src/
+src/service/
 ├── __init__.py
-├── main.py
-├── config.py
-├── database.py
-├── models/
-├── schemas/
-├── routes/
-└── services/
+├── config.py          # Pydantic settings from env
+├── database.py        # Async SQLAlchemy engine and session
+├── main.py            # FastAPI app factory
+├── models.py          # SQLAlchemy ORM models
+├── routes.py          # API route handlers
+└── schemas.py         # Pydantic request/response models
 tests/
-├── __init__.py
-├── conftest.py
 └── test_api.py
-migrations/
-docker/
-├── Dockerfile
-└── docker-compose.yml
 pyproject.toml
-README.md
 ```
